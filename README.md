@@ -12,3 +12,5 @@ To identify factors associated with stable or unstable transgene expression, gen
   2. Low and high expression peaks
   
 For investigating association of genomic rearrangements at integration level with expression stability, **TLA-Seq** data was analyzed at early as well as late passage for the producer cell lines. 
+
+Based on the key factors observed while comparing stable and unstable cell lines, genome wide **landing pads** were reported both for the regions to target and for those to avoid during targeted transgene integration. 
