@@ -1,4 +1,4 @@
-### Run command: ./wgs_analysis_sv.sh -sample <> > >(tee logs/wgs_analysis_sv.err) 2> >(tee logs/wgs_analysis_sv.log >&2)
+### Run command: ./wgs_analysis_sv.sh -sample <sample> > >(tee logs/wgs_analysis_sv_<sample>.err) 2> >(tee logs/wgs_analysis_sv_<sample>.log >&2)
 
 export JAVA_HOME=/usr/local/bioinf/java/latest/
 export PATH=$PATH:/usr/local/bioinf/java/latest/bin
