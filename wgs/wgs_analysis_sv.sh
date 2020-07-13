@@ -67,26 +67,5 @@ $lumpy/lumpyexpress \
 #####################	Manta 	###########################################
 ###########################################################################
 
-python /usr/local/bioinf/manta/manta-1.6.0_prog/bin/configManta.py --bam recal_reads_$sample\.bam --referenceFasta /data/borth/hdhiman/ref/picr_refseq/picr.fa  --runDir manta_analysis
-/data/heena/work/hd/UCB_analysis/manta_analysis/runWorkflow.py -m local -j 8
-
-###########################################################################
-#####################	Gridss 	###########################################
-###########################################################################
-export PATH=$PATH:/usr/local/bioinf/R/R-3.6.0/bin/
-/data/borth/hdhiman/toolkit/gridss/./gridss.sh --jar /data/borth/hdhiman/toolkit/gridss/gridss-2.8.0-gridss-jar-with-dependencies.jar \
-	--reference /data/borth/hdhiman/ref/picr_refseq/picr.fa \
-	--output 6A6_res/gridss_6A6.vcf.gz \
-	--assembly 6A6_res/6A6_gridss_assembly.bam \
-	--threads 8 \
-	--workingdir 6A6_res/tmp \
-	6A6_res/recal_reads_6A6.bam
-
-export PATH=$PATH:/usr/local/bioinf/R/R-3.6.0/bin/
-/data/borth/hdhiman/toolkit/gridss/./gridss.sh --jar /data/borth/hdhiman/toolkit/gridss/gridss-2.8.0-gridss-jar-with-dependencies.jar \
-	--reference /data/borth/hdhiman/ref/picr_refseq/picr.fa \
-	--output 6H1_res/gridss_6H1.vcf.gz \
-	--assembly 6H1_res/6H1_gridss_assembly.bam \
-	--threads 8 \
-	--workingdir 6H1_res/tmp \
-	6H1_res/recal_reads_6H1.bam
+python /usr/local/bioinf/manta/manta-1.6.0_prog/bin/configManta.py --bam recal_reads_$sample\.bam --referenceFasta /data/borth/hdhiman/ref/picr_refseq/picr.fa  --runDir $out/manta_analysis
+$out/manta_analysis/runWorkflow.py -m local -j 8
